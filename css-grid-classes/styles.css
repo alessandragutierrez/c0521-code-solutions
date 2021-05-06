@@ -1,0 +1,29 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+  font-family: sans-serif;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  width: 100%;
+}
+
+.column-third {
+  width: calc(100% / 3);
+}
+
+.column-fourth {
+  width: calc(100% / 4);
+}
+
+.column-three-fourths {
+  width: 75%;
+}
+
+img {
+  width: 100%;
+}
