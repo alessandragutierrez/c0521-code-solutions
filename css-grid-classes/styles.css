@@ -8,11 +8,15 @@
   display: flex;
 }
 
-.column-one-third {
+.column-full {
+  width: 100%;
+}
+
+.column-third {
   width: calc(100% / 3);
 }
 
-.column-one-fourth {
+.column-fourth {
   width: calc(100% / 4);
 }
 
@@ -22,5 +26,4 @@
 
 img {
   width: 100%;
-  max-height: 100%;
 }
