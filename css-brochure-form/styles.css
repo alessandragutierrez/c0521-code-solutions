@@ -1,5 +1,5 @@
 h2 {
-  font-family: 'Brandon Grotesque';
+  font-family: 'Brandon Grotesque', sans-serif;
   font-size: 1rem;
   text-transform: uppercase;
   text-align: center;
@@ -7,8 +7,9 @@ h2 {
   color: rgb(235, 93, 86);
 }
 
-form {
-  font-family: 'Brandon Grotesque';
+fieldset {
+  border: none;
+  font-family: 'Brandon Grotesque', sans-serif;
   font-size: 0.7rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -26,10 +27,6 @@ form input {
   margin-bottom: 15px;
 }
 
-form select {
-  margin-bottom: -10px;
-}
-
 form input,
 form select {
   width: 100%;
@@ -39,16 +36,17 @@ form select {
 }
 
 select.select {
-  font-family: 'Brandon Grotesque';
+  font-family: 'Brandon Grotesque', sans-serif;
   background-color: rgb(243, 243, 243);
 }
 
 .button-div {
   text-align: right;
+  margin-top: 7px;
 }
 
 .submit-button {
-  font-family: 'Brandon Grotesque';
+  font-family: 'Brandon Grotesque', sans-serif;
   font-size: 12px;
   text-transform: uppercase;
   color: white;
