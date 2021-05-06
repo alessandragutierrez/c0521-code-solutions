@@ -1,0 +1,30 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+  font-family: sans-serif;
+}
+
+.row {
+  display: flex;
+}
+
+.column-smash {
+  width: calc(100% / 3);
+}
+
+.column-images {
+  width: (100% / 4);
+}
+
+.column-dk-p {
+  width: 75%;
+}
+
+.column-mario-p {
+  width: 75%;
+}
+
+img {
+  width: 100%;
+  max-height: 100%;
+}
