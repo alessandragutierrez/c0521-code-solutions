@@ -8,19 +8,15 @@
   display: flex;
 }
 
-.column-smash {
+.column-one-third {
   width: calc(100% / 3);
 }
 
-.column-images {
-  width: (100% / 4);
+.column-one-fourth {
+  width: calc(100% / 4);
 }
 
-.column-dk-p {
-  width: 75%;
-}
-
-.column-mario-p {
+.column-three-fourths {
   width: 75%;
 }
 
