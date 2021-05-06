@@ -1,0 +1,62 @@
+h2 {
+  font-family: 'Brandon Grotesque', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.05rem;
+  color: rgb(235, 93, 86);
+}
+
+fieldset {
+  border: none;
+  font-family: 'Brandon Grotesque', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  width: 40%;
+  margin: auto;
+}
+
+label {
+  padding-left: 10px;
+  line-height: 1;
+}
+
+form input {
+  margin-top: 3px;
+  margin-bottom: 15px;
+}
+
+form input,
+form select {
+  width: 100%;
+  border: solid 0.5px rgb(166, 170, 169);
+  border-radius: 5px;
+  padding: 12px 8px 10px;
+}
+
+select.select {
+  font-family: 'Brandon Grotesque', sans-serif;
+  background-color: rgb(243, 243, 243);
+}
+
+.button-div {
+  text-align: right;
+  margin-top: 7px;
+}
+
+.submit-button {
+  font-family: 'Brandon Grotesque', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: white;
+  background-color: rgb(235, 93, 86);
+  width: 85px;
+  border: none;
+  border-radius: 30px;
+  padding: 8px 5px;
+}
+
+::placeholder {
+  color: rgb(154, 153, 153);
+}
