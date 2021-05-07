@@ -65,6 +65,12 @@ img {
   padding-left: 8px;
 }
 
+.column {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
 .button-div {
   text-align: center;
   margin: 10px;
@@ -80,14 +86,4 @@ img {
   background-color: white;
   border: solid 2px rgb(228, 62, 61);
   padding: 8px 34px;
-}
-
-.column {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-}
-
-div.row-wrap > p {
-  padding-right: 48px;
 }
