@@ -18,7 +18,7 @@
   /* your code here */
   position: absolute;
   top: 10px;
-  left: 235px;
+  right: 15px;
   z-index: 10;
 }
 
@@ -33,7 +33,7 @@
 
   /* your code here */
   position: absolute;
-  top: 155px;
+  bottom: 2px;
   z-index: 10;
 }
 
