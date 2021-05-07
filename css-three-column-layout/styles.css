@@ -1,0 +1,59 @@
+h2 {
+  margin-bottom: 35px;
+}
+
+img {
+  width: 50%;
+  height: auto;
+}
+
+h3 {
+  font-size: 18px;
+  margin-top: 25px;
+}
+
+p {
+  width: 85%;
+  margin: auto;
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgb(221, 221, 221);
+}
+
+.container {
+  max-width: 70%;
+  margin: auto;
+  padding: 4%;
+  background-color: rgb(26, 150, 218);
+  color: white;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+
+.row-title {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  margin: 0 7%;
+}
+
+.column-full {
+  width: 100%;
+}
+
+.column-third {
+  width: calc(100% / 3);
+}
+
+.image {
+  background-color: white;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
