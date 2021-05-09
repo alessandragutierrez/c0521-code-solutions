@@ -49,6 +49,71 @@
   padding: 10px 11px;
 }
 
+/* main */
+.main {
+  padding: 55px 70px;
+}
+
+.main .hero-image {
+  background-image: url("../images/product/product-header.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 125px 0;
+  position: relative;
+}
+
+.main .column-half {
+  color: white;
+  width: 49%;
+  margin-left: 60px;
+  z-index: 10;
+}
+
+.main .column-half h1 {
+  font-family: 'Tiempos Headline', serif;
+  font-weight: lighter;
+  font-size: 29px;
+  margin: 0;
+}
+
+.main .column-half p {
+  font-size: 13px;
+  line-height: 20px;
+
+  /* margin-bottom: 25px; */
+}
+
+.main .column-overlay-full {
+  background-color: rgba(105, 105, 105, 0.3);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+/* main-body */
+
+.main-body .section-one,
+.main-body .section-three {
+  background-color: rgb(251, 251, 251);
+}
+
+.main-body .column h2 {
+  font-family: 'Tiempos Headline', serif;
+  font-weight: normal;
+  color: rgb(80, 81, 79);
+}
+
+.main-body .column p {
+  color: rgb(110, 110, 110);
+}
+
+.main-body .column blockquote {
+  color: rgb(110, 110, 110);
+}
+
 /* main-info */
 .main-info .row {
   padding: 20px 70px;
@@ -150,4 +215,5 @@
   font-size: 15px;
   text-decoration: none;
   padding-right: 30px;
+}
 }
