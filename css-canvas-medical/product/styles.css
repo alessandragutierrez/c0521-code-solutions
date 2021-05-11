@@ -112,6 +112,7 @@
 
 .main-body .column blockquote {
   color: rgb(110, 110, 110);
+  text-indent: 0%;
 }
 
 /* main-info */
