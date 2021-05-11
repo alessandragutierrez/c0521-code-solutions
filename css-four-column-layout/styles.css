@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 100%;
+  margin: auto;
+  background-color: rgb(247, 248, 250);
+  font-family: 'Barlow', sans-serif;
+}
+
+.row {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 150px;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-full > h2 {
+  text-align: center;
+  margin: 0;
+}
+
+.column-quarter {
+  flex-basis: 25%;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 16px;
+  padding-bottom: 10px;
+}
+
+.column-quarter .phone {
+  width: 90%;
+}
+
+.column-quarter .icon {
+  width: 20%;
+}
+
+.column-quarter > section > h3 {
+  font-size: 15px;
+}
+
+.column-quarter > section > p {
+  font-size: 12px;
+  padding: 12px 0;
+}
