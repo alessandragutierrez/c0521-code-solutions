@@ -61,7 +61,7 @@ var orderHistory = [
       },
       {
         itemName: 'The Art of Sql',
-        date: {
+        data: {
           author: 'Faroult, Stephane',
           returnWindow: 'Aug 4, 2020'
         }
