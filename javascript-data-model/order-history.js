@@ -7,11 +7,11 @@ var orderHistory = [
     deliveryDate: 'Aug 8, 2020',
     items: [
       {
-        itemName: {
-          title: 'Javascript for impatient programmers',
-          author: 'Rauschmayer, Dr. Axel'
-        },
-        returnWindow: 'Sep 7, 2020'
+        itemName: 'Javascript for impatient programmers',
+        data: {
+          author: 'Rauschmayer, Dr. Axel',
+          returnWindow: 'Sep 7, 2020'
+        }
       }
     ]
   },
@@ -23,11 +23,11 @@ var orderHistory = [
     deliveryDate: 'Jul 20, 2020',
     items: [
       {
-        itemName: {
-          title: 'The Timeless Way of Building',
-          author: 'Alexander, Christopher'
-        },
-        returnWindow: 'Aug 19, 2020'
+        itemName: 'The Timeless Way of Building',
+        data: {
+          author: 'Alexander, Christopher',
+          returnWindow: 'Aug 19, 2020'
+        }
       }
     ]
   },
@@ -40,7 +40,9 @@ var orderHistory = [
     items: [
       {
         itemName: 'GameCube Controller Adapter, Super Smash Bros Switch Gamecube Adapter for WII U, PC Support Turbo and Vibration Features. No Driver and No Lag-Gamecube Adapter',
-        returnWindow: 'Aug 5, 2020'
+        data: {
+          returnWindow: 'Aug 5, 2020'
+        }
       }
     ]
   },
@@ -53,14 +55,16 @@ var orderHistory = [
     items: [
       {
         itemName: 'GameCube Controller - Super Smash Bros. Edition (Nintendo Switch)',
-        returnWindow: 'Aug 4, 2020'
+        data: {
+          returnWindow: 'Aug 4, 2020'
+        }
       },
       {
-        itemName: {
-          title: 'The Art of Sql',
-          author: 'Faroult, Stephane'
-        },
-        returnWindow: 'Aug 4, 2020'
+        itemName: 'The Art of Sql',
+        date: {
+          author: 'Faroult, Stephane',
+          returnWindow: 'Aug 4, 2020'
+        }
       }
     ]
   }
