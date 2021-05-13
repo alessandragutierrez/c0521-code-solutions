@@ -52,6 +52,7 @@
 /* main */
 .main {
   padding: 55px 70px;
+  margin-top: 50px;
 }
 
 .main .hero-image {
@@ -84,7 +85,7 @@
 }
 
 .main .column-overlay-full {
-  background-color: rgba(105, 105, 105, 0.3);
+  background-color: rgba(88, 88, 88, 0.3);
   position: absolute;
   width: 100%;
   height: 100%;
@@ -94,24 +95,57 @@
 }
 
 /* main-body */
+.main-body .section-one,
+.main-body .section-two,
+.main-body .section-three {
+  padding: 45px 0;
+  color: rgb(110, 110, 110);
+}
 
 .main-body .section-one,
 .main-body .section-three {
   background-color: rgb(251, 251, 251);
 }
 
-.main-body .column h2 {
+.main-body .row {
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 70px;
+}
+
+.main-body .column-half {
+  flex-basis: 50%;
+}
+
+.main-body .column-half img {
+  width: 100%;
+}
+
+.main-body .column-40p {
+  flex-basis: 40%;
+  padding-bottom: 30px;
+}
+
+.main-body .column-40p h2 {
   font-family: 'Tiempos Headline', serif;
-  font-weight: normal;
-  color: rgb(80, 81, 79);
+  font-weight: 100;
 }
 
-.main-body .column p {
-  color: rgb(110, 110, 110);
+.main-body .column-40p p {
+  font-size: 13px;
+  line-height: 20px;
 }
 
-.main-body .column blockquote {
-  color: rgb(110, 110, 110);
+.main-body .column-40p .quote {
+  font-family: 'Tiempos Headline', serif;
+  font-style: italic;
+  font-size: 12px;
+  padding-right: 10px;
+  margin: 0;
+}
+
+.main-body .column-40p .quote-source {
+  margin: 8px 0;
 }
 
 /* main-info */
@@ -215,5 +249,4 @@
   font-size: 15px;
   text-decoration: none;
   padding-right: 30px;
-}
 }
