@@ -1,0 +1,243 @@
+/* selector container & selector all rows */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  font-family: 'Avenir', sans-serif;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+/* header */
+.header {
+  border-bottom: solid 1px whitesmoke;
+}
+
+.header .row {
+  padding: 15px 70px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .column img {
+  max-width: 115px;
+}
+
+.header .column-three-quarters {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header .column-three-quarters .current-page {
+  color: rgb(32, 69, 103);
+}
+
+.header .column-three-quarters a {
+  text-decoration: none;
+  color: rgb(160, 160, 160);
+  padding: 0 18px;
+  font-size: 13px;
+}
+
+.header .contact-us-button {
+  color: white;
+  font-family: 'Avenir', sans-serif;
+  font-size: 13px;
+  background-color: rgb(32, 69, 103);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 11px;
+}
+
+/* main */
+.main {
+  padding: 55px 70px;
+  margin-top: 50px;
+}
+
+.main .hero-image {
+  background-image: url("../images/about-us/about-us-header.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 90px 0;
+  position: relative;
+}
+
+.main .column-half {
+  color: white;
+  width: 48%;
+  margin-left: 60px;
+  z-index: 10;
+}
+
+.main .column-half h1 {
+  font-family: 'Tiempos Headline', serif;
+  font-weight: lighter;
+  font-size: 29px;
+  margin: 0;
+}
+
+.main .column-half > p {
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.main .column-overlay-full {
+  background-color: rgba(56, 56, 56, 0.3);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+/* main-body */
+
+/* .main-body {
+  color: rgb(110, 110, 110);
+  padding-top: 28px;
+  padding-bottom: 115px;
+}
+
+.main-body > h2 {
+  text-align: center;
+  font-family: 'Tiempos Headline', serif;
+  font-weight: 100;
+  font-size: 26px;
+}
+
+.main-body .row {
+  flex-direction: column;
+  width: 48.6%;
+  margin: auto;
+}
+
+.main-body .row > h4 {
+  margin-bottom: 5px;
+}
+
+.main-body .row > h4::first-letter {
+  font-size: 27px;
+  font-family: 'Tiempos Headline', serif;
+  font-weight: 100;
+  padding-right: 7px;
+}
+
+.main-body .row > p {
+  font-size: 13px;
+  font-weight: 100;
+  line-height: 20px;
+  padding-bottom: 15px;
+} */
+
+/* main-info */
+.main-info {
+  border-top: solid 1px whitesmoke;
+}
+
+.main-info .row {
+  padding: 20px 70px;
+}
+
+.main-info .column-half {
+  width: 50%;
+}
+
+.main-info .column-half h1,
+.main-info .column-half p {
+  color: rgb(110, 110, 110);
+}
+
+.main-info .column-half h1 {
+  font-family: 'Tiempos Headline', serif;
+  font-size: 24px;
+}
+
+.main-info .column-half p {
+  font-size: 13px;
+}
+
+.main-info .column-half-button {
+  width: 50%;
+  text-align: right;
+  margin: auto;
+}
+
+.main-info .get-started-button {
+  color: white;
+  font-family: 'Avenir', sans-serif;
+  font-size: 15px;
+  background-color: rgb(32, 69, 103);
+  border: none;
+  border-radius: 4px;
+  padding: 14px 38px;
+}
+
+/* footer */
+.footer {
+  background-color: rgb(82, 83, 81);
+  color: white;
+}
+
+.footer .row {
+  padding-top: 80px;
+  padding-bottom: 90px;
+  padding-right: 60px;
+  padding-left: 70px;
+}
+
+.footer .column-half {
+  flex-basis: 50%;
+}
+
+.footer .column-half img {
+  max-width: 120px;
+  margin-top: 10px;
+}
+
+.footer .column-half p {
+  line-height: 24px;
+  font-size: 13px;
+  padding-top: 15px;
+}
+
+.footer .column-quarter {
+  flex-basis: 25%;
+}
+
+.footer .column-quarter table {
+  line-height: 35px;
+  font-size: 15px;
+}
+
+.footer .column-quarter thead {
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.footer .column-quarter a {
+  text-decoration: none;
+  color: white;
+}
+
+/* lower-footer */
+.lower-footer {
+  background-color: rgb(250, 250, 250);
+}
+
+.lower-footer .row {
+  padding: 45px 0;
+  padding-left: 70px;
+}
+
+.lower-footer .column a {
+  color: rgb(106, 106, 106);
+  font-size: 15px;
+  text-decoration: none;
+  padding-right: 30px;
+}
