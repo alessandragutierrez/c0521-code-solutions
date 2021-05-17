@@ -5,7 +5,7 @@ var clickCount = document.querySelector('.click-count');
 
 hotButton.addEventListener('click', addClick);
 
-function addClick() {
+function addClick(event) {
   clickNumber++;
   clickCount.textContent = 'Clicks: ' + clickNumber;
   if (clickNumber < 4) {
