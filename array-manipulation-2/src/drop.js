@@ -11,10 +11,8 @@
 
 function drop(array, count) {
   var finalArray = [];
-  for (var i = 0; i < array.length; i++) {
-    if (i >= count) {
-      finalArray.push(array[i]);
-    }
+  for (var i = count; i < array.length; i++) {
+    finalArray.push(array[i]);
   }
   return finalArray;
 }
