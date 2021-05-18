@@ -1,4 +1,60 @@
+body {
+  font-family: sans-serif;
+}
+
 .open-modal-button {
+  background-color: rgb(74, 74, 233);
   color: white;
-  background-color: blue;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px gray;
+  padding: 10px 25px;
+}
+
+.open-modal-button:hover {
+  cursor: pointer;
+}
+
+.modal.open {
+  position: fixed;
+  min-height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+}
+
+.modal.close {
+  display: none;
+}
+
+.survey-box {
+  text-align: center;
+  background-color: white;
+  border-radius: 3px;
+  padding: 50px 40px;
+}
+
+.survey-box h2 {
+  margin: 0;
+  padding-bottom: 50px;
+}
+
+.survey-button {
+  background-color: rgb(235, 93, 93);
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px gray;
+  padding: 10px 30px;
+}
+
+.survey-button:hover {
+  cursor: pointer;
 }
