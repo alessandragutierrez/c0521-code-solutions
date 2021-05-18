@@ -1,26 +1,27 @@
 /* exported omit */
 
 // input: 2 parameters
-//       (source) an object
-//       (keys) an array of strings
-// output: a new object containing all the properties from the original
-//   argument that were NOT listed in keys
+//     -- (source) an object
+//     -- (keys) javascript strings representing properties on the object
+// output: a new object containing the properties NOT listed in (keys)
 
-// -- if source object is empty
-//     -- return source object
-// -- create a variable of an empty object to hold final properties / values
-// -- loop through the array of strings
-//     -- loop through the properties in source
-//         -- if the string at current index is NOT equal to the current property
-//             -- add the property and value into the final variable
-// -- return the final variable
+// -- create a variable of an empty object, to store final keys/values
+// -- loop through the source object and copy onto new variable
+// -- loop through the keys by index
+//    -- loop through the properties in the source
+//        -- if keys at current index matches any property in the source
+//          -- delete the property
+// -- return the final object
 
 function omit(source, keys) {
   var finalObject = {};
-  for (var key in source) {
+  for (var prop in source) {
+    finalObject[prop] = source[prop];
+  }
+  for (var key in finalObject) {
     for (var i = 0; i < keys.length; i++) {
-      if (keys[i] !== key) {
-        finalObject[key] = source[key];
+      if (key === keys[i]) {
+        delete finalObject[key];
       }
     }
   }

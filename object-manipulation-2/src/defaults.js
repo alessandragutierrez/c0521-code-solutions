@@ -14,14 +14,14 @@
 
 function defaults(target, source) {
   if (target !== source) {
-    for (var key in source) {
-      target[key] = source[key];
+    for (var prop in source) {
+      target[prop] = source[prop];
     }
   }
-  for (const propTarget in target) {
-    for (const propSource in source) {
-      if (propTarget !== propSource) {
-        target[propSource] = source[propSource];
+  for (var propT in target) {
+    for (var propS in source) {
+      if (propT !== propS) {
+        target[propS] = source[propS];
       }
     }
   }
