@@ -1,5 +1,4 @@
-// /* exported titleCase */
-// eslint-disable-next-line no-unused-vars
+/* exported titleCase */
 function titleCase(string) {
   var i;
 
