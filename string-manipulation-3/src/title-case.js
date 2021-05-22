@@ -45,7 +45,7 @@ function titleCase(string) {
   }
 
   // turning the array back into a string
-  // assigning it to the string variable and returning it
+  // assigning return value to the string variable and returning it
   string = wordArray.join(' ');
   return string;
 }
