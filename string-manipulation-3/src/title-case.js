@@ -27,17 +27,19 @@ function titleCase(string) {
   }
   wordArray.push(word);
 
-  // sorting through the array
-  // lowercasing words that should be lowercased
-  // uppercasing the first letter of every word + the word JavaScript and API
+  // all words that SHOULD be lowercased are in a single array
+  // sorting through the wordArray
+  // fixing casing on special words
+  // uppercasing the first letter of every word that is NOT in the lowercasing array
+  var lowercaseWords = ['and', 'or', 'nor', 'but', 'a', 'an', 'the', 'as', 'at', 'by', 'for', 'in', 'of', 'on', 'per', 'to'];
   for (i = 0; i < wordArray.length; i++) {
-    if (wordArray[i] === 'javascript') {
-      wordArray[i] = 'JavaScript';
-    } else if (wordArray[i] === 'javascript:') {
+    if (wordArray[i].includes('javascript:')) {
       wordArray[i] = 'JavaScript:';
-    } else if (wordArray[i] === 'api') {
+    } else if (wordArray[i].includes('javascript')) {
+      wordArray[i] = 'JavaScript';
+    } else if (wordArray[i].includes('api')) {
       wordArray[i] = 'API';
-    } else if (wordArray[i] !== 'and' && wordArray[i] !== 'or' && wordArray[i] !== 'nor' && wordArray[i] !== 'but' && wordArray[i] !== 'a' && wordArray[i] !== 'an' && wordArray[i] !== 'the' && wordArray[i] !== 'as' && wordArray[i] !== 'at' && wordArray[i] !== 'by' && wordArray[i] !== 'for' && wordArray[i] !== 'in' && wordArray[i] !== 'of' && wordArray[i] !== 'on' && wordArray[i] !== 'per' && wordArray[i] !== 'to') {
+    } else if (lowercaseWords.indexOf(wordArray[i]) === -1) {
       wordArray[i] = wordArray[i].charAt(0).toUpperCase() + wordArray[i].slice(1);
     }
   }
