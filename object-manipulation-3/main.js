@@ -308,6 +308,7 @@ function tiebreaker() {
     deal(1);
     findScores();
     checkForTies();
+    findWinner();
   }
 }
 
@@ -325,8 +326,9 @@ function findWinner() {
   }
   if (winner.length > 1) {
     checkForTies();
+  } else {
+    console.log('The winner is', winner + ',', 'with a high score of', highScore + '.');
   }
-  console.log('The winner is', winner + ',', 'with a high score of', highScore + '.');
 }
 
 function playGame(playerNames, cardsPerHand) {
