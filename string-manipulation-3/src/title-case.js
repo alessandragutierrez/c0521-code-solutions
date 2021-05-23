@@ -1,11 +1,12 @@
 /* exported titleCase */
 function titleCase(string) {
   var i;
+  var wordArray = [];
+  var word = '';
+  var lowercaseWords = ['and', 'or', 'nor', 'but', 'a', 'an', 'the', 'as', 'at', 'by', 'for', 'in', 'of', 'on', 'per', 'to'];
 
   // turning string into an array
   // sorting through dashes and colons
-  var wordArray = [];
-  var word = '';
   string = string.toLowerCase();
   for (i = 0; i < string.length; i++) {
     if (string[i] === '-') {
@@ -27,25 +28,21 @@ function titleCase(string) {
   }
   wordArray.push(word);
 
-  // all words that SHOULD be lowercased are in a single array
   // sorting through the wordArray
-  // fixing casing on special words
-  // uppercasing the first letter of every word that is NOT in the lowercasing array
-  var lowercaseWords = ['and', 'or', 'nor', 'but', 'a', 'an', 'the', 'as', 'at', 'by', 'for', 'in', 'of', 'on', 'per', 'to'];
+  // uppercasing the first letter of every word that is NOT in the lowercaseWords array
   for (i = 0; i < wordArray.length; i++) {
-    if (wordArray[i].includes('javascript:')) {
-      wordArray[i] = 'JavaScript:';
-    } else if (wordArray[i].includes('javascript')) {
-      wordArray[i] = 'JavaScript';
-    } else if (wordArray[i].includes('api')) {
-      wordArray[i] = 'API';
-    } else if (lowercaseWords.indexOf(wordArray[i]) === -1) {
+    if (lowercaseWords.indexOf(wordArray[i]) === -1) {
       wordArray[i] = wordArray[i].charAt(0).toUpperCase() + wordArray[i].slice(1);
     }
   }
 
-  // turning the array back into a string
-  // assigning return value to the string variable and returning it
+  // turning the array back into a string and searching for special case words
+  // assigning return values to the string variable and returning it from the function
   string = wordArray.join(' ');
+  if (string.includes('Javascript')) {
+    string = string.replace('Javascript', 'JavaScript');
+  } else if (string.includes('Api')) {
+    string = string.replace('Api', 'API');
+  }
   return string;
 }
