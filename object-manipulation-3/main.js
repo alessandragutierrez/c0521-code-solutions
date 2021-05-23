@@ -4,7 +4,7 @@ var i;
 var j;
 var k;
 var players = [];
-var playersTied;
+var playersTied = [];
 var cardDeck = [
   {
     rank: 'Ace',
@@ -313,12 +313,18 @@ function tiebreaker() {
 
 function findWinner() {
   var highScore = 0;
-  var winner;
+  var winner = [];
   for (i = 0; i < players.length; i++) {
-    if (players[i].score > highScore) {
+    if (players[i].score === highScore) {
+      winner.push(players[i].name);
+    } else if (players[i].score > highScore) {
       highScore = players[i].score;
-      winner = players[i].name;
+      winner = [];
+      winner.push(players[i].name);
     }
+  }
+  if (winner.length > 1) {
+    checkForTies();
   }
   console.log('The winner is', winner + ',', 'with a high score of', highScore + '.');
 }
@@ -329,9 +335,8 @@ function playGame(playerNames, cardsPerHand) {
   shuffle();
   deal(cardsPerHand);
   findScores();
-  checkForTies();
-  tiebreaker();
   findWinner();
+  tiebreaker();
 }
 
 playGame(['Tom', 'Lisa', 'Molly'], 3);
