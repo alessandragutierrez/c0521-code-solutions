@@ -57,3 +57,9 @@ img {
   color: black;
   margin: 2rem;
 }
+
+.fa-chevron-left:hover,
+.fa-chevron-right:hover,
+.fa-circle:hover {
+  cursor: pointer;
+}
