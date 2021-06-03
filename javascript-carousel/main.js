@@ -3,9 +3,28 @@ var $rightArrow = document.querySelector('.fa-chevron-right');
 var $slides = document.querySelectorAll('.slide');
 
 var currentSlide = 1;
+var intervalID = setInterval(nextSlide, 3.0 * 1000);
 
-document.addEventListener('click', changeSlide);
-function changeSlide(event) {
+document.addEventListener('click', changeSlideClick);
+$rightArrow.addEventListener('click', nextSlideClick);
+$leftArrow.addEventListener('click', previousSlideClick);
+
+function changeSlideClick(event) {
+  changeSlide();
+  resetInterval();
+}
+
+function nextSlideClick() {
+  nextSlide();
+  resetInterval();
+}
+
+function previousSlideClick() {
+  previousSlide();
+  resetInterval();
+}
+
+function changeSlide() {
   if (event.target.classList.contains('fa-circle') !== true) {
     return;
   }
@@ -19,8 +38,7 @@ function changeSlide(event) {
   }
 }
 
-$rightArrow.addEventListener('click', nextSlide);
-function nextSlide(event) {
+function nextSlide() {
   if (currentSlide === $slides.length) {
     $slides[currentSlide - 1].classList.add('hidden');
     currentSlide = 1;
@@ -32,8 +50,7 @@ function nextSlide(event) {
   }
 }
 
-$leftArrow.addEventListener('click', previousSlide);
-function previousSlide(event) {
+function previousSlide() {
   if (currentSlide === 1) {
     $slides[currentSlide - 1].classList.add('hidden');
     currentSlide = $slides.length;
@@ -43,4 +60,9 @@ function previousSlide(event) {
     currentSlide--;
     $slides[currentSlide - 1].classList.remove('hidden');
   }
+}
+
+function resetInterval() {
+  clearInterval(intervalID);
+  intervalID = setInterval(nextSlide, 3.0 * 1000);
 }
