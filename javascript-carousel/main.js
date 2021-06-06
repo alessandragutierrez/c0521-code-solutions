@@ -1,64 +1,65 @@
-var $leftArrow = document.querySelector('.fa-chevron-left');
-var $rightArrow = document.querySelector('.fa-chevron-right');
-var $slides = document.querySelectorAll('.slide');
+var $carousel = document.querySelector('.carousel-container');
+var $images = document.querySelectorAll('img');
+var $progressDots = document.querySelectorAll('.fa-circle');
 
 var currentSlide = 1;
 var intervalID = setInterval(nextSlide, 3.0 * 1000);
 
-document.addEventListener('click', changeSlideClick);
-$rightArrow.addEventListener('click', nextSlideClick);
-$leftArrow.addEventListener('click', previousSlideClick);
+$carousel.addEventListener('click', handleClick);
 
-function changeSlideClick(event) {
-  changeSlide();
-  resetInterval();
-}
-
-function nextSlideClick() {
-  nextSlide();
-  resetInterval();
-}
-
-function previousSlideClick() {
-  previousSlide();
+function handleClick(event) {
+  if (event.target.classList.contains('fa-circle') === true) {
+    changeSlide();
+  } else if (event.target.classList.contains('fa-chevron-right') === true) {
+    nextSlide();
+  } else if (event.target.classList.contains('fa-chevron-left') === true) {
+    previousSlide();
+  }
   resetInterval();
 }
 
 function changeSlide() {
-  if (event.target.classList.contains('fa-circle') !== true) {
-    return;
-  }
   var targetSlide = event.target.getAttribute('data-view');
-  for (var i = 0; i < $slides.length; i++) {
-    if ($slides[i].getAttribute('data-view') === targetSlide) {
-      $slides[currentSlide - 1].classList.add('hidden');
+  for (var i = 0; i < $images.length; i++) {
+    if ($images[i].getAttribute('data-view') === targetSlide) {
+      $images[currentSlide - 1].classList.add('hidden');
+      $progressDots[currentSlide - 1].classList.remove('fas');
       currentSlide = parseInt(targetSlide);
-      $slides[currentSlide - 1].classList.remove('hidden');
+      $images[currentSlide - 1].classList.remove('hidden');
+      $progressDots[currentSlide - 1].classList.add('fas');
     }
   }
 }
 
 function nextSlide() {
-  if (currentSlide === $slides.length) {
-    $slides[currentSlide - 1].classList.add('hidden');
+  if (currentSlide === $images.length) {
+    $images[currentSlide - 1].classList.add('hidden');
+    $progressDots[currentSlide - 1].classList.remove('fas');
     currentSlide = 1;
-    $slides[currentSlide - 1].classList.remove('hidden');
+    $images[currentSlide - 1].classList.remove('hidden');
+    $progressDots[currentSlide - 1].classList.add('fas');
   } else {
-    $slides[currentSlide - 1].classList.add('hidden');
+    $images[currentSlide - 1].classList.add('hidden');
+    $progressDots[currentSlide - 1].classList.remove('fas');
     currentSlide++;
-    $slides[currentSlide - 1].classList.remove('hidden');
+    $images[currentSlide - 1].classList.remove('hidden');
+    $progressDots[currentSlide - 1].classList.add('fas');
   }
 }
 
 function previousSlide() {
   if (currentSlide === 1) {
-    $slides[currentSlide - 1].classList.add('hidden');
-    currentSlide = $slides.length;
-    $slides[currentSlide - 1].classList.remove('hidden');
+    $images[currentSlide - 1].classList.add('hidden');
+    $progressDots[currentSlide - 1].classList.remove('fas');
+    currentSlide = $images.length;
+    $images[currentSlide - 1].classList.remove('hidden');
+    $progressDots[currentSlide - 1].classList.add('fas');
   } else {
-    $slides[currentSlide - 1].classList.add('hidden');
+    $images[currentSlide - 1].classList.add('hidden');
+    $progressDots[currentSlide - 1].classList.remove('fas');
     currentSlide--;
-    $slides[currentSlide - 1].classList.remove('hidden');
+    $images[currentSlide - 1].classList.remove('hidden');
+    $progressDots[currentSlide - 1].classList.add('fas');
   }
 }
 
